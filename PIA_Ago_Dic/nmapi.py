@@ -16,6 +16,8 @@ def escaneo(ipingr,puertos):
      ip_ingresada = ipingr
      if ip_patron.search(ip_ingresada):
         print(f"{ip_ingresada} es una direccion valida")
+     else:
+        print("la direccione es invalida")
         break
  #Validacion de puertos
  while True:
@@ -24,6 +26,8 @@ def escaneo(ipingr,puertos):
     if rangoptsv:
         ptomin = int(rangoptsv.group(1))
         ptomax = int(rangoptsv.group(2))
+    else:
+        print("el rango de puertos es invalido")
         break
 
  nm = nmap.PortScanner()
